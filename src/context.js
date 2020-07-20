@@ -37,9 +37,15 @@ let tempItems = items.map( item => {
 return tempItems
 }
 
+getRoom = (slug) => {
+    let tempRooms = [...this.state.rooms]
+    const room = tempRooms.find( room => room.slug===slug)
+    return room
+}
+
     render() {
         return (
-            <RoomCOntext.Provider  value={{...this.state}}>
+            <RoomCOntext.Provider  value={{...this.state, getRoom: this.getRoom}}>
                 {this.props.children}
             </RoomCOntext.Provider>
         )
