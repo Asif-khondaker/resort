@@ -12,7 +12,7 @@ export class FeaturedRooms extends Component {
 
         rooms = rooms.map( room => {
             return <Room key={room.id} room={room}/> 
-            console.log(room)
+            //console.log(room)
         })
         
         
